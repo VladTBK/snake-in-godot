@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://q6mp70uxt8ck"]
+
+[ext_resource type="PackedScene" uid="uid://bo0o6ojlbovua" path="res://scenes/snake_head/snake_head.tscn" id="1_jpmtx"]
+
+[node name="Main" type="Node"]
+
+[node name="SnakeHead" parent="." instance=ExtResource("1_jpmtx")]

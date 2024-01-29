@@ -1,7 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://q6mp70uxt8ck"]
+[gd_scene load_steps=3 format=3 uid="uid://q6mp70uxt8ck"]
 
 [ext_resource type="PackedScene" uid="uid://bo0o6ojlbovua" path="res://scenes/snake_head/snake_head.tscn" id="1_jpmtx"]
+[ext_resource type="PackedScene" uid="uid://b4rwiajdrvlt2" path="res://scenes/apple_generator/apple_generator.tscn" id="2_oirkg"]
 
 [node name="Main" type="Node"]
 
+[node name="StateController" type="Node" parent="."]
+
+[node name="AppleGenerator" parent="StateController" instance=ExtResource("2_oirkg")]
+
 [node name="SnakeHead" parent="." instance=ExtResource("1_jpmtx")]
+position = Vector2(162, 150)

@@ -2,14 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://b5xdhrv5yyht3" path="res://scenes/apple/Apple Tile.png" id="1_2gc7d"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_66cst"]
-radius = 15.0333
+[sub_resource type="CircleShape2D" id="CircleShape2D_ixbc8"]
 
-[node name="Apple" type="CharacterBody2D"]
+[node name="Apple" type="CharacterBody2D" groups=["apple"]]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_2gc7d")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_66cst")
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ixbc8")

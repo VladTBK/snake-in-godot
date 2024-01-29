@@ -28,6 +28,8 @@ func get_dir():
 
 func _on_area_2d_area_entered(area):
 	if area.get_parent().is_in_group("apple"):
-		area.get_parent().queue_free()
 		score += 1
 		snake_speed += 0.5
+		var x_pos = randf_range(0, get_viewport().size.x)
+		var y_pos = randf_range(0, get_viewport().size.y)
+		area.get_parent().global_position = Vector2(x_pos, y_pos)
